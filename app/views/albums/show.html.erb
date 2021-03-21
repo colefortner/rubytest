@@ -1,0 +1,15 @@
+</br>
+</br>
+
+<h1>hello from <%= @album.name %></h1>
+</br>
+<h2>Songs</h2>
+<% @album_songs.each do |song| %>
+    <div><%= song.name %></div>
+<% end %>
+
+<%= link_to "new song", new_album_song_path(@album) %>
+</br>
+<%= link_to "all albums", :albums %>
+
+

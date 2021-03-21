@@ -1,0 +1,14 @@
+
+
+<h1>creating a new song for <%= @album.name %></h1>
+
+<%= link_to "cancel", album_path(@album) %>
+
+<%= form_for Song.new, url: album_songs_path(@album) do |f| %>
+    <%= f.text_field :name, placeholder: "Song Name" %>
+    <%= f.submit %>
+<% end %>
+
+
+
+

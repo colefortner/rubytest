@@ -1,0 +1,14 @@
+</br>
+</br>
+
+<% @albums.each do |album| %>
+    <div><%= link_to album.name, album %></div>
+<% end %>
+
+<%= form_for Album.new do |f| %>
+    <%= f.text_field :name, placeholder: "Album Name" %>
+    <%= f.text_field :artist_name, placeholder: "Artist Name" %>
+    <%= f.submit %>
+<% end %>
+
+
